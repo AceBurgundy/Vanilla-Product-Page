@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pathway+Extreme:wght@400;600&display=swap');
+
+:root.dark {
+    --Button: #ffffff;
+    --Background: #080c03;
+    --Text: #e2ed57;
+}
+
+:root {
+    --Button: #e2ed57;
+    --Background: #ffffff;
+    --Text: #080c03;
+}
+
+* {
+    font-family: "Poppins";
+    color: var(--Text);
+    background-color: var(--Background);
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    background-color: var(--Button);
+}
+
+a {
+    text-decoration: none;
+}
+
+html, body {
+    height: 100%;
+}
+
+html, body {
+    height: -webkit-fill-available !important; 
+}
+
+#flashes {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    position: relative;
+    right: 0;
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    margin: 1rem 0 0 1rem;
+    transition: 200ms;
+}
+
+body {
+    display: grid;
+    place-items: center;
+}
+
+#container {
+    height: 100%;
+    width: 90%;
+    display: grid;
+    grid-template-rows: 10% 80% 10%;
+    grid-template-areas: 
+    "navigation" 
+    "place" 
+    "footer";
+}
+
+#container > * {
+    border: 2px solid white;
+}
+
+#nav-bar {
+    grid-area: navigation;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav-bar__link {
+    font-family: "Pathway Extreme", sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+svg {
+    width: 2rem;
+    cursor: pointer;
+}
+
+svg.hide {
+    display: none;
+}
+
+#content {
+    grid-area: place;
+}
+
+#menu {
+    padding: 5rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+#footer {
+    grid-area: footer;
+}
+
+.menu__card {
+    max-width: 100px;
+    height: 300px;
+}
+

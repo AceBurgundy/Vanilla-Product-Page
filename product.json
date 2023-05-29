@@ -1,0 +1,156 @@
+{
+    "products" : [
+        {
+            "id": 1,
+            "title": "iPhone 9",
+            "description": "An apple mobile which is nothing like apple",
+            "price": 549,
+            "discountPercentage": 12.96,
+            "rating": 4.69,
+            "stock": 94,
+            "brand": "Apple",
+            "category": "smartphones",
+            "thumbnail": "./assets/images/iPhone-9/thumbnail.webp",
+            "images": [
+                "./assets/images/iPhone-9/1.webp",
+                "./assets/images/iPhone-9/2.webp",
+                "./assets/images/iPhone-9/3.webp",
+                "./assets/images/iPhone-9/4.webp",
+                "./assets/images/iPhone-9/5.webp"
+            ]
+        },
+        {
+            "id": 4,
+            "title": "OPPOF19",
+            "description": "OPPO F19 is officially announced on April 2021.",
+            "price": 280,
+            "discountPercentage": 17.91,
+            "rating": 4.3,
+            "stock": 123,
+            "brand": "OPPO",
+            "category": "smartphones",
+            "thumbnail": "./assets/images/OPPOF19/thumbnail.webp",
+            "images": [
+                "./assets/images/OPPOF19/1.webp",
+                "./assets/images/OPPOF19/2.webp",
+                "./assets/images/OPPOF19/3.webp",
+                "./assets/images/OPPOF19/4.webp",
+                "./assets/images/OPPOF19/5.webp"
+            ]
+        },
+        {
+            "id": 8,
+            "title": "Microsoft Surface Laptop 4",
+            "description": "Style and speed. Stand out on HD video calls backed by Studio Mics. Capture ideas on the vibrant touchscreen.",
+            "price": 1499,
+            "discountPercentage": 10.23,
+            "rating": 4.43,
+            "stock": 68,
+            "brand": "Microsoft Surface",
+            "category": "laptops",
+            "thumbnail": "./assets/images/Microsoft-Surface-Laptop-4/thumbnail.webp",
+            "images": [
+                "/assets/images/Microsoft-Surface-Laptop-4/1.webp",
+                "/assets/images/Microsoft-Surface-Laptop-4/2.webp",
+                "/assets/images/Microsoft-Surface-Laptop-4/3.webp",
+                "/assets/images/Microsoft-Surface-Laptop-4/4.webp",
+                "/assets/images/Microsoft-Surface-Laptop-4/5.webp"
+            ]
+        },
+        {
+            "id": 9,
+            "title": "Infinix INBOOK",
+            "description": "Infinix Inbook X1 Ci3 10th 8GB 256GB 14 Win10 Grey \u2013 1 Year Warranty",
+            "price": 1099,
+            "discountPercentage": 11.83,
+            "rating": 4.54,
+            "stock": 96,
+            "brand": "Infinix",
+            "category": "laptops",
+            "thumbnail": "./assets/images/Infinix-INBOOK/thumbnail.webp",
+            "images": [
+                "./assets/images/Infinix-INBOOK/1.webp",
+                "./assets/images/Infinix-INBOOK/2.webp",
+                "./assets/images/Infinix-INBOOK/3.webp",
+                "./assets/images/Infinix-INBOOK/4.webp",
+                "./assets/images/Infinix-INBOOK/5.webp"
+            ]
+        },
+        {
+            "id": 12,
+            "title": "Brown Perfume",
+            "description": "Royal_Mirage Sport Brown Perfume for Men & Women - 120ml",
+            "price": 40,
+            "discountPercentage": 15.66,
+            "rating": 4,
+            "stock": 52,
+            "brand": "Royal_Mirage",
+            "category": "fragrances",
+            "thumbnail": "./assets/images/Brown-Perfume/thumbnail.jpg",
+            "images": [
+                "./assets/images/Brown-Perfume/1.webp",
+                "./assets/images/Brown-Perfume/2.webp",
+                "./assets/images/Brown-Perfume/3.webp",
+                "./assets/images/Brown-Perfume/4.webp",
+                "./assets/images/Brown-Perfume/5.webp"
+            ]
+        },
+        {
+            "id": 13,
+            "title": "Fog Scent Xpressio Perfume",
+            "description": "Product details of Best Fog Scent Xpressio Perfume 100ml For Men cool long lasting perfumes for Men",
+            "price": 13,
+            "discountPercentage": 8.14,
+            "rating": 4.59,
+            "stock": 61,
+            "brand": "Fog Scent Xpressio",
+            "category": "fragrances",
+            "thumbnail": "./assets/images/Fog-Scent-Xpressio-Perfume/thumbnail.webp",
+            "images": [
+                "./assets/images/Fog-Scent-Xpressio-Perfume/1.webp",
+                "./assets/images/Fog-Scent-Xpressio-Perfume/2.webp",
+                "./assets/images/Fog-Scent-Xpressio-Perfume/3.webp",
+                "./assets/images/Fog-Scent-Xpressio-Perfume/4.webp",
+                "./assets/images/Fog-Scent-Xpressio-Perfume/5.webp"
+            ]
+        },
+        {
+            "id": 15,
+            "title": "Eau De Perfume Spray",
+            "description": "Genuine  Al-Rehab spray perfume from UAE/Saudi Arabia/Yemen High Quality",
+            "price": 30,
+            "discountPercentage": 10.99,
+            "rating": 4.7,
+            "stock": 105,
+            "brand": "Lord - Al-Rehab",
+            "category": "fragrances",
+            "thumbnail": "./assets/images/Eau-De-Perfume-Spray/thumbnail.webp",
+            "images": [
+                "./assets/images/Eau-De-Perfume-Spray/1.webp",
+                "./assets/images/Eau-De-Perfume-Spray/2.webp",
+                "./assets/images/Eau-De-Perfume-Spray/3.webp",
+                "./assets/images/Eau-De-Perfume-Spray/4.webp",
+                "./assets/images/Eau-De-Perfume-Spray/5.webp"
+            ]
+        },
+        {
+            "id": 16,
+            "title": "Hyaluronic Acid Serum",
+            "description": "L'Or\u00c3\u00a9al Paris introduces Hyaluron Expert Replumping Serum formulated with 1.5% Hyaluronic Acid",
+            "price": 19,
+            "discountPercentage": 13.31,
+            "rating": 4.83,
+            "stock": 110,
+            "brand": "L'Oreal Paris",
+            "category": "skincare",
+            "thumbnail": "./assets/images/Hyaluronic-Acid-Serum/thumbnail.webp",
+            "images": [
+                "./assets/images/Hyaluronic-Acid-Serum/1.webp",
+                "./assets/images/Hyaluronic-Acid-Serum/2.webp",
+                "./assets/images/Hyaluronic-Acid-Serum/3.webp",
+                "./assets/images/Hyaluronic-Acid-Serum/4.webp",
+                "./assets/images/Hyaluronic-Acid-Serum/5.webp"
+            ]
+        }
+    ]
+}
