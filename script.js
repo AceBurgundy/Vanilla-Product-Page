@@ -41,35 +41,48 @@ fetch("product.json")
                 });
             }
         }
-
-        // clicking a product
-        [...elements(".menu__card")].forEach((card) => {
-            card.addEventListener("click", (e) => {
-                showProductPage(e.target.getAttribute("data-id"));
-            });
-        });
     })
     .catch((error) => {
         console.error("Error:", error);
     });
 
+//clicking a product
+document.addEventListener("click", (e) => {
+    if (e.target.classList.contains("menu__card")) {
+        const productId = e.target.getAttribute("data-id");
+        showProductPage(productId);
+    }
+    e.stopPropagation(); // Stop event propagation
+});
+
 //switch pages
 const pages = elements(".page");
 const navLinks = elements(".nav-bar__link");
 
-navLinks.forEach((link) =>
-    link.addEventListener("click", () => {
-        const pageToShow = link.getAttribute("data-page");
+// Iterate over each nav link and attach a click event listener
+navLinks.forEach(navLink => {
+  navLink.addEventListener('click', () => {
+    const dataPageValue = navLink.getAttribute('data-page');
+    
+    // Find the corresponding element with the data-page value as its ID
+    const targetElement = document.getElementById(dataPageValue);
 
-        pages.forEach((page) => {
-            if (pageToShow !== page.getAttribute("id")) {
-                page.classList.remove("show");
-            } else {
-                page.classList.add("show");
-            }
-        });
-    })
-);
+    // If the target element exists
+    if (targetElement) {
+      // Add the 'show' class to the target element
+      targetElement.classList.add('show');
+      
+      // Remove the 'show' class from other sibling elements
+      const siblings = Array.from(targetElement.parentElement.children);
+      siblings.forEach(sibling => {
+        if (sibling !== targetElement) {
+          sibling.classList.remove('show');
+        }
+      });
+    }
+  });
+});
+
 
 let dark = true;
 // Night Light
@@ -90,37 +103,32 @@ sunOff.addEventListener("click", () => {
     dark = !dark;
 });
 
-const content = element("#content")
+const content = element("#content");
 
 function showProductPage(product_id) {
-    fetchedProducts.forEach((product) => {
-        if (product.id == product_id) {
-            content.innerHTML += Product(product);
-            [...content.children].forEach(child => {
-                if (child.getAttribute("id") != "product") {
-                    child.classList.remove("show")
-                } else {
-                    child.classList.add("show")
-                }
-            })
-            return;
-        }
-    });
+    const existingProductPage = element("#product");
+    if (existingProductPage) {
+        existingProductPage.remove();
+    }
 
-    element("#product-right__close").addEventListener("click", () => {
-        [...content.children].forEach(child => {
-            if (child.getAttribute("id") != "menu") {
-                child.classList.remove("show")
+    const product = fetchedProducts.find((product) => product.id == product_id);
+
+    if (product) {
+        content.innerHTML += Product(product);
+
+        pages.forEach((page) => {
+            if (page.getAttribute("id") !== "product") {
+                page.classList.remove("show");
             } else {
-                child.classList.add("show")
+                page.classList.add("show");
             }
-        })
-        element("#product").remove()
-    });
+        });
+    }
 }
+
 const Product = (props) => {
     return `
-        <div id="product" class="page">
+        <div id="product">
             <div id="product-left">
                 <div id="product-left__image">
                     <img id="product-left__image-thumbnail" src="${
@@ -128,7 +136,7 @@ const Product = (props) => {
                     }" alt="${props.title}">
                     <div id="product-left__images">
                         ${props.images.map((image, index) => {
-                            `<img src="${image}" alt="${index}" class="product-left__images-image">`;
+                            return `<img src="${image}" alt="${index}" class="product-left__images-image">`;
                         })}
                     </div>
                 </div>
@@ -144,3 +152,10 @@ const Product = (props) => {
         </div>
     `;
 };
+
+// Event listener for closing the product page
+document.addEventListener("click", (e) => {
+    if (e.target.id === "product-right__close") {
+        element("#product").remove()
+    }
+});
